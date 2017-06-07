@@ -4,7 +4,7 @@
             <div class="nav-logo-wrapper">
                 <img src="../../static/img/rxxt_03.png" width="30" height="20" alt="">
             </div>
-            <span>绿茵乳腺关爱社区</span>
+            <span class="title-font">绿茵乳腺关爱社区</span>
         </div>
         <div class="logo-wrapper">
             <img src="../../static/img/rxxt_06.png" width="100%" height="150" alt="">
@@ -24,15 +24,17 @@
             </div>
         </div>
         <div class="content-wrapper">
-            <!-- <router-link :to="{name:'content',params:{'contentItem',content}}" tag="div" class="content-item">
-                <img :src="" alt="">
-            </router-link> -->
+            <div class="content-item" v-for="item in content">
+                <router-link :to="{name:'content',params:{'contentItem':item}}" tag="div" class="item-img-wrapper">
+                    <img :src="item.image" alt="" width="100%" height="100%">
+                    <span class="img-title">{{item.title}}</span>
+                </router-link>
+            </div>
         </div>
     </div>
 </template>
 <script>
 import Data from '../../data.json';
-console.log(Data);
 export default {
     data() {
         return {
@@ -60,7 +62,9 @@ export default {
 .main-wrapper .title .nav-logo-wrapper img {
     vertical-align: middle;
 }
-
+.main-wrapper .title .title-font{
+    margin-left:-20px;
+}
 .logo-wrapper {
     width: 100%;
     height: 150px;
@@ -86,5 +90,35 @@ export default {
 .tab-wrapper .tab-item.tab-bb {
     color: #dd328d;
     border-bottom: 1px solid #dd328d;
+}
+
+.content-wrapper {
+    margin-top: 20px;
+}
+
+.content-wrapper .content-item {
+    margin-bottom: 20px;
+    padding: 0 13px 0 13px;
+}
+
+.content-wrapper .item-img-wrapper{
+    position: relative;
+    overflow: hidden;
+    font-size: 0;
+}
+.content-wrapper .img-title {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    padding: 0 5px 0 5px;
+    line-height: 25px; 
+    text-align: left;
+    background: rgba(0, 0, 0, .55);
+    color: #fff;
+    font-size: 18px;
 }
 </style>
