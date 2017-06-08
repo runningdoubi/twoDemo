@@ -7,7 +7,7 @@
             <span class="title-font">绿茵乳腺关爱社区</span>
         </div>
         <div class="logo-wrapper">
-            <img src="../../static/img/rxxt_06.png" width="100%" height="150" alt="">
+            <img src="../../static/img/rxxt_06.jpg" width="100%" height="150" alt="">
         </div>
         <div class="tab-wrapper">
             <div class="tab-item tab-bb">
