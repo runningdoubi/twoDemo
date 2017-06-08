@@ -1,11 +1,11 @@
 <template>
     <div class="main-wrapper">
-        <div class="title">
+        <!-- <div class="title">
             <div class="nav-logo-wrapper">
                 <img src="../../static/img/rxxt_03.png" width="30" height="20" alt="">
             </div>
             <span class="title-font">绿茵乳腺关爱社区</span>
-        </div>
+        </div> -->
         <div class="logo-wrapper">
             <img src="../../static/img/rxxt_06.jpg" width="100%" height="150" alt="">
         </div>
