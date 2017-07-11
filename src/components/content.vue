@@ -4,7 +4,7 @@
             <img :src="contentItem.image" alt="" width="100%">
         </div>
         <div class="content-wrapper">
-        	<h3 class="title">{{contentItem.content1Title}}</h3>
+        	<h3 class="title" v-if="contentItem.content1Title != ''">{{contentItem.content1Title}}</h3>
         	<p class="content">{{contentItem.content1}}</p>
         	<h3 class="title" v-if="contentItem.content2Title != ''">{{contentItem.content2Title}}</h3>
         	<p class="content" v-if="contentItem.content2 != ''">{{contentItem.content2}}</p>
@@ -26,7 +26,8 @@ export default {
 <style rel="stylesheet" scoped>
 .img-wrapper {
     width: 100%;
-    height: 190px;
+    min-height: 190px;
+    max-height: 190px;
     font-size: 0;
 }
 .content-wrapper{
